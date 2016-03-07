@@ -62,9 +62,9 @@ public class User extends AppCompatActivity {
         logout_button.setOnClickListener(
                 new View.OnClickListener() {
                     public void onClick(View arg0) {
-
-                        finish();
-                        System.exit(0);
+                        Intent intent = new Intent(User.this, Login.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
                     }
 
                 }
